@@ -3,7 +3,6 @@ var express = require('express');
 var config = require('config');
 var bodyParser = require('body-parser');
 var session = require('express-session');
-var sockerio = require('socket.io');
 // var path = require('path');
 // var cookieParser = require('cookie-parser');
 // var logger = require('morgan');
@@ -38,12 +37,8 @@ app.use(controller);
 var host = config.get("server.host");
 var port = config.get("server.port");
 
-var server = app.listen(port, host, function () {
+app.listen(port, host, function () {
   console.log("Running on port ", port);
 });
-
-var io = sockerio(server);
-
-var socketcontrol = require('./apps/common/socketcontrol')(io);
 
 module.exports = app;

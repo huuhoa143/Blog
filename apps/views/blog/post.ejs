@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><%if (data && data.post) {%> <%= data.post.title%> <%}%></title>
+    <title>Post</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/static/theme/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -55,13 +55,12 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
-            <%if (data && data.post) {%>
             <div class="post-heading">
-              <h1><%= data.post.title%></h1>
+              <h1>Title</h1>
               <!--<h2 class="subheading">Problems look mighty small from 150 miles up</h2>-->
               <span class="meta">Posted by
-                <a href="#"><%= data.post.author%></a>
-                on <%= data.post.created_at%></span>
+                <a href="#">Author</a>
+                on 2019</span>
             </div>
             <%}%>
           </div>
@@ -75,7 +74,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
-            <%- data.post.content%>
+            Content
           </div>
         </div>
       </div>
